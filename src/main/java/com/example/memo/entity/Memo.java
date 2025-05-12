@@ -15,7 +15,6 @@ public class Memo {
 
     // 생성자
 
-
     // 기능
      public void update(MemoRequestDto dto) {
             this.title = dto.getTitle();
