@@ -85,10 +85,11 @@ public class MemoController {
         }
 
         // 필수값 검증
-        if (dto.getTitle() == null || dto.getContents() != null) {
+        if (dto.getTitle() == null || dto.getContents() == null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         memo.updateTitle(dto);
+        memo.updateContents(dto);
 
         //응답
         return new ResponseEntity<>(new MemoResponseDto(memo), HttpStatus.OK);
